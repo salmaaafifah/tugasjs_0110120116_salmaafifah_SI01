@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jadilah Member</title>
+  <style type="text/css">
+    body{
+      overflow-y: hidden;
+      margin:0;
+      padding: 0;
+      font-family: verdana;
+      background-color: pink;
+    }
+    form{
+      font-family: arial;
+      background-color: plum;
+      width: 300px;
+      margin: 180px auto;
+      padding: 30px;
+      
+    }
+    input{
+        margin: 10px;
+    }
+    input.login{
+      background-color: whitesmoke;
+      color: black;
+      font-family: verdana;
+      font-weight: bold;
+      border-radius: 10px;
+      padding: 5px 10px;
+      margin: 30px 10px auto 0px;
+      text-transform: uppercase;
+      transition: .2s;
+    }
+    input.login:hover{
+      background-color: dodgerblue;
+      color: #CDCDCD;
+    }
+    p{
+        text-align:center;
+      margin: 40px auto;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #111302;
+      font-family: verdana;
+      background-color: slategray;
+    }
+  </style>
+</head>
+<body>
+  <form action="profile.html" method="get" id="myForm" onsubmit=" return validasi()">
+    <p>FORM LOGIN</p>
+    E-mail    <input type="email" name="email" placeholder="Masukan email anda">
+    Username  <input type="text" name="username" placeholder="Masukan nama anda">
+    Password  <input type="password" name="password" placeholder="password">
+    <input class="login" type="submit" name="submit" value="login">
+  </form>
+</body>
+<script type="text/javascript">
+  function validasi(){
+    var email = document.forms["myForm"["email"].value;
+    var username = document.forms["myForm"]["username"].value;
+    var password = document.forms["myForm"]["password"].value;
+    if( email =="salmaa.affh@gmail.com" && username == "salmaafifah" && password == "sisteminformasi"){
+      return true;
+    }
+    else if(email ==""username =="" || password ==""){
+      alert("ada kesalahan mohon di isi dengan valid");
+      return false;
+    }
+    else{
+      alert("ada kesalahan mohon di isi dengan valid");
+      return false;
+    }
+  }
+</script>
+</html>
