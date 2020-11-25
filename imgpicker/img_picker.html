@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>pilihan mobil</title>
+    <style>img{
+        width: 50%;
+    }
+    </style>
+    <script>
+        function choose(){
+            let input_gambar= document.getElementById("mobil").value;
+            if(input_gambar =="mini_cooper"){
+                document.getElementById("gambar").src="mobil1.jpg";
+            }else if(input_gambar =="BMW_i8"){
+                document.getElementById("gambar").src="mobil2.jpg";
+            }else if(input_gambar =="pajero"){
+                document.getElementById("gambar").src="mobil3.jpg";
+            }else if(input_gambar =="ferrari"){
+                document.getElementById("gambar").src="mobil4.jpg";
+            }else{console.log("gambarnya_ga_ada")}
+        }
+
+    </script>
+</head>
+<body>
+        <form id="form1">
+                        Pilihan Mobil : <select name="mobil" id="mobil" onchange="choose()">
+                            <option value="">pilih gambar</option>
+                            <option value="mini_cooper">mini cooper</option>
+                            <option value="BMW_i8">MBW i8</option>
+                            <option value="pajero">pajero</option>
+                            <option value="ferrari">ferrari</option>
+                            </select>
+    <br>
+    <img src="" alt="Mini Cooper" id="gambar">
+</body>
+</html>
