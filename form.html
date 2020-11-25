@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form validasi</title>
+</head>
+<body >
+  <center>
+  <h1>FORM VALIDASI CUSTOMER</h1>
+
+  <form action="">
+    <label for="">NAMA</label>
+    <input type="text" id="nama"><br><br>
+    <label for="">EMAIL</label>
+    <input type="email" id="email"><br><br>
+    <label for="">WAKTU PEMBERANGKATAN</label>
+    <input type="time" id="waktu" min="00.00" max="23.59"><br><br>
+    <label for="">DESTINASI</label>
+    <input type="text" id="destinasi"><br><br>
+    <label for=""> TIKET </label>
+    <input type="number" id="tiket"><br><br>
+    <button type="button" onclick="validasi()">SUBMIT</button>
+
+  </form>
+ <h1 id="namacustomer"></h1>
+ <h1 id="emailcustomer"></h1>
+ <h1 id="waktupemberangkatan"></h1>
+ <h1 id="destinasicustomer"></h1>
+ <h1 id="tiketcustomer"></h1> 
+
+<script>
+  function validasi(){
+    let nama = document.getElementById('nama').value;
+    let email = document.getElementById('email').value;
+    let waktu = document.getElementById('waktu').value;
+    let destinasi = document.getElementById('destinasi').value;
+    let tiket = document.getElementById('tiket').value;
+
+    if (nama == "" || nama.leght >30) {
+      alert("masukan nama anda");
+    }else if (email == "") {
+      alert("silahkan isi email anda");
+    }else if (waktu == "") {
+      alert("silahkan isi waktu pemberangkatan anda");
+    }else if (destinasi == "") {
+      alert("isi destinasi yang anda ingin tuju");
+    }else if (tiket == "") {
+      alert("masukan jumlah tiket yang dibutuhkan");
+    }
+    else{
+      document.getElementById('namacustomer').innerHTML = 'nama customer :'+ nama + '<br>'
+      document.getElementById('emailcustomer').innerHTML = 'email :' +email+'<br>'
+      document.getElementById('waktupemberangkatan').innerHTML = 'waktu pemberangkatan :' +waktu+'<br>'
+      document.getElementById('destinasicustomer').innerHTML = 'destinasi customer :' +destinasi+'<br>'
+      document.getElementById('tiketcustomer').innerHTML = 'tiket customer :' +tiket+ '<br>'
+    }
+    
+  }
+
+</script>
+</center>
+</body>
+</html>
